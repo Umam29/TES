@@ -55,14 +55,7 @@ if (isset($_POST['submit'])) {
             $arr[$j] = explode(" ", $na);
             $firt_word = $arr[$j][0];
             $na = substr(strstr($na," "), 1);
-            if ($j == 0)
-            {
-                $name[$j] = $na . " " . $firt_word . "\n";
-            }
-            else
-            {
-                $name[$j] = $na . " " . $firt_word;
-            }
+            $name[$j] = $na . " " . $firt_word;
             fwrite($file, $name[$j]); //Memasukkan nama yang sudah urut ke dalam file txt
             $j++;
         }
